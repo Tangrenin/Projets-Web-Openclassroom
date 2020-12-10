@@ -1,0 +1,11 @@
+/*Fonts business*/
+body
+{
+    font-family: Raleway, sans-serif;
+}
+
+/* ----- Inherit fonts for inputs and buttons */
+input, button
+{
+    font: inherit;
+}
