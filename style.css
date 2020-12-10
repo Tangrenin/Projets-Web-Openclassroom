@@ -1,11 +1,110 @@
-/*Fonts business*/
-body
-{
-    font-family: Raleway, sans-serif;
-}
-
-/* ----- Inherit fonts for inputs and buttons */
+/* Inherit fonts for inputs and buttons */
 input, button
 {
     font: inherit;
+}
+
+/*General properties*/
+body
+{
+    font-family: Raleway, sans-serif;
+    background: white;
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Header */
+header
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logo-title
+{
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+#logo-title a
+{
+    padding-left: 5vw;
+}
+
+#inscription
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    padding-right: 5vw;
+}
+
+nav
+{
+    width: 100vw;
+    padding: 0;
+}
+
+nav ul
+{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li
+{
+    border-bottom: solid 4px #F2F2F2;
+    padding-bottom: 1em;
+    flex: 1;
+    text-align: center;
+}
+
+/*TEMP*/
+img{max-width: 230px}
+
+
+/* ---- Affichage Tablette ---- */
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+
+}
+
+/* ---- Affichage Desktop ---- */
+@media screen and (min-width: 1024px)
+{
+    /*Reseting mobile specific properties*/
+    #logo-title
+    {
+        width: auto;
+    }
+    #inscription
+    {
+        width: auto;
+    }
+    nav
+    {
+        flex: 0;
+    }
+
+    /*Adjusting header display*/
+    header
+    {
+        justify-content: flex-end;
+    }
+    #logo-title
+    {
+        margin-right: auto;
+    }
+
+
+
 }
