@@ -29,7 +29,23 @@ ul
     font-weight: bold;
 }
 
+/* Pour que nav ne cache pas le titre quand on clique sur les ancres*/
+#hebergements
+{
+    scroll-margin-top: 1em;
+}
+
+#activites
+{
+    scroll-margin-top: 2.5em;
+}
+
 /* ----- Champ de recherche & filtres -----*/
+#search-field
+{
+    margin-bottom: 2em;
+}
+
 /* ----- Barre de recherche */
 #search-bar label
 {
@@ -158,32 +174,128 @@ main
 .card
 {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 0 13px -7px #999999;
-    height: 20vh;
+    box-shadow: 0 0 17px -4px #999999;
 }
 
 .card img
 {
     object-fit: cover;
-    width:35%;
-    height: 100%;
     padding: 0.3em 0.7em 0.3em 0.3em;
+    border-radius: 20px 0 0 20px;
 }
 
-.card h3
+.card-content
 {
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em 0 0.5em 0.5em;
 }
+
 .card p
 {
     margin: 0;
 }
 
+.card h3
+{
+    margin: 0 0 0.2em 0;
+}
 
+.score
+{
+    display: flex;
+    margin-bottom: 00.3em;
+}
+
+.star-full
+{
+    color: #0065FC;
+}
+
+.star-empty
+{
+    color: #F2F2F2;
+}
+
+/* Populaires */
+#populaires .card
+{
+    height: 8.5em;
+}
+
+#populaires img
+{
+    width:35%;
+}
+
+#populaires .score
+{
+    margin-top: auto;
+}
+
+/* Hébergements */
+#hebergements .card
+{
+    flex-direction: column;
+    height: 12em;
+}
+
+#hebergements img
+{
+    height: 55%;
+    width: auto;
+    padding: 0.3em 0.3em .5em 0.3em;
+    border-radius: 20px 20px 0 0;
+}
+
+#hebergements .card-content
+{
+    padding: 0 0 0 1em;
+}
+
+#hebergements .score
+{
+    margin-top: 0.3em;
+}
+
+/* Activités */
+#activites .card
+{
+    flex-direction: column;
+    height: 11em;
+}
+
+#activites img
+{
+    height: 70%;
+    width: auto;
+    padding: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+#activites h3
+{
+    padding-left: 0.8em;
+    padding-top: 0.8em;
+
+
+}
+
+/* ----- Champ de recherche & filtres -----*/
+footer
+{
+    background: #F2F2F2;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    margin-bottom: 0;
+}
+
+footer p
+{
+    margin-bottom: 0;
+}
 
 /* ---- Affichage mobile ---- */
 @media screen and (max-width: 767px)
@@ -286,6 +398,11 @@ main
     }
 
     /* ----- Main ----- */
+    main
+    {
+        margin-bottom: 2em;
+    }
+
     #populaires
     {
         background: #F2F2F2;
@@ -293,8 +410,12 @@ main
 
     section
     {
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding: 1.5em 5vw 1.5em 5vw;
+    }
+
+    #activites
+    {
+        padding-top: 0;
     }
 
     /* ----- Cartes */
@@ -302,6 +423,13 @@ main
     {
         margin: 1em 0;
     }
+
+    footer
+    {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
 }
 
 /* ---- Affichage Tablette ---- */
