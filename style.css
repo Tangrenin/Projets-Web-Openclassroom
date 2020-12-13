@@ -4,7 +4,7 @@ input, button
     font: inherit;
 }
 
-/*General properties*/
+/* ----- General properties ----- */
 body
 {
     font-family: Raleway, sans-serif;
@@ -18,59 +18,291 @@ a
     color: inherit;
 }
 
+ul
+{
+    list-style-type: none;
+}
+/* ----- Header et nav ----- */
+#inscription
+{
+    color: #0065FC;
+    font-weight: bold;
+}
 
-/* Header */
-header
+/* ----- Champ de recherche & filtres -----*/
+/* ----- Barre de recherche */
+#search-bar label
+{
+    visibility: hidden;
+    display: none;
+}
+
+#search-bar
+{
+    display: flex;
+}
+
+#search-bar input
+{
+    border: solid 1px #F2F2F2;
+    border-right: none;
+    font-weight: bolder;
+    padding-left: 1em;
+}
+
+#search-bar .fas
+{
+    width: 3.1em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-gps
+{
+    background: #F2F2F2;
+    border-radius: 12px 0 0 12px;
+}
+
+#search-bar button
+{
+    color: white;
+    background: #0065FC;
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+}
+
+/* ----- Barre de recherche */
+#filter-block
 {
     display: flex;
     flex-wrap: wrap;
 }
 
-#logo-title
+/* ----- Filtres */
+.filter-button
 {
-    margin-right: auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-#logo-title a
-{
-    padding-left: 5vw;
-}
-
-#inscription
-{
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
-    padding-right: 5vw;
+    background: white;
+    border: solid 2px #F2F2F2;
+    border-left: none;
+    border-radius: 25px;
+    padding: 0 0.7em 0 0;
+    margin: 0.5em 0.3em;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
 }
 
-nav
+.filter-button i
 {
-    width: 100vw;
-    padding: 0;
+    background: #DEEBFF;
+    color: #0065FC;
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+    /* Marges négatives dépasser sur la bordure*/
+    margin: -2px 0.4em -2px -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul
+.filter-button:hover
+{
+    background: #DEEBFF;
+    border: solid 2px #DEEBFF;
+}
+
+/* ----- infos logements */
+#info-logements
 {
     display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
+}
+#info-logements i
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.7em;
+    width: 1.9em;
+    color: #0065FC;
+    background: white;
+    border: solid 1px #DEEBFF;
+    border-radius: 100%;
+    margin-right: 0.8em;
+}
+
+/* ----- Main ----- */
+main
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#populaires .section-title
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-title i
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- Cartes */
+.card
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 13px -7px #999999;
+    height: 20vh;
+}
+
+.card img
+{
+    object-fit: cover;
+    width:35%;
+    height: 100%;
+    padding: 0.3em 0.7em 0.3em 0.3em;
+}
+
+.card h3
+{
+    margin: 0;
+}
+.card p
+{
     margin: 0;
 }
 
-nav li
+
+
+/* ---- Affichage mobile ---- */
+@media screen and (max-width: 767px)
 {
-    border-bottom: solid 4px #F2F2F2;
-    padding-bottom: 1em;
-    flex: 1;
-    text-align: center;
+    /* Header and nav */
+    header
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logo-title
+    {
+        margin-top: 0.3em;
+        margin-bottom: 0.02em;
+    }
+    #logo-title a
+    {
+        padding-left: 5vw;
+    }
+
+    #inscription
+    {
+        text-align: center;
+        padding-right: 5vw;
+        padding-top: 1.8em;
+
+    }
+
+    nav
+    {
+        /*On fixe le nav en haut de l'écran*/
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 9;
+    }
+
+    nav ul
+    {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li
+    {
+        flex: 1;
+        text-align: center;
+    }
+
+    nav a
+    {
+        padding-bottom: 1em;
+        padding-top: 1em;
+        border-bottom: solid 4px #F2F2F2;
+        display: block;
+    }
+
+    nav a:active
+    {
+        border-bottom: solid 4px #0065FC;
+        font-weight: bold;
+        color: #0065FC;
+    }
+
+    /* Champ de recherche et filtres */
+    #search-field
+    {
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+    #search-field h2
+    {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    #search-field p
+    {
+        margin-top: 0.5em;
+    }
+
+    #search-bar
+    {
+        width: 100%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #search-bar input
+    {
+        flex: 1;
+    }
+
+    #filter-block
+    {
+        margin-bottom: 1.5em;
+    }
+
+    /* ----- Main ----- */
+    #populaires
+    {
+        background: #F2F2F2;
+    }
+
+    section
+    {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    /* ----- Cartes */
+    .card
+    {
+        margin: 1em 0;
+    }
 }
-
-/*TEMP*/
-img{max-width: 230px}
-
 
 /* ---- Affichage Tablette ---- */
 @media screen and (min-width: 768px) and (max-width: 1023px)
@@ -82,29 +314,33 @@ img{max-width: 230px}
 @media screen and (min-width: 1024px)
 {
     /*Reseting mobile specific properties*/
-    #logo-title
-    {
-        width: auto;
-    }
-    #inscription
-    {
-        width: auto;
-    }
-    nav
-    {
-        flex: 0;
-    }
+
 
     /*Adjusting header display*/
     header
     {
-        justify-content: flex-end;
+        visibility: hidden;
+        height: 0;
     }
-    #logo-title
+
+    nav::before
     {
+        content: url("images/logo/Reservia.svg");
         margin-right: auto;
     }
 
+    nav:after
+    {
+        content: "S'inscrire";
+    }
 
+    nav
+    {
+        display: flex;
+    }
 
+    nav ul
+    {
+        display: flex;
+    }
 }
