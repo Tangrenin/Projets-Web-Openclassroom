@@ -292,30 +292,27 @@ footer p
 /* ---- Affichage mobile ---- */
 @media screen and (max-width: 767px)
 {
+    body
+    {
+        font-size: 3.5vw;
+    }
+
     /* Header and nav */
     header
     {
         display: flex;
         justify-content: space-between;
-    }
-
-    #logo-title
-    {
-        margin-top: 0.3em;
-        margin-bottom: 0.02em;
-    }
-    #logo-title a
-    {
-        padding-left: 5vw;
+        padding-right: 5%;
+        padding-left: 5%;
     }
 
     #inscription
     {
-        text-align: center;
-        padding-right: 5vw;
-        padding-top: 1.8em;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
 
     nav
     {
@@ -388,11 +385,14 @@ footer p
     #search-bar button
     {
         border-radius: 12px;
+        width: 15%;
+        display: flex;
+        justify-content: center;
     }
 
     #search-bar .fas
     {
-        width: 3.1em;
+        width: 15%;
         height: 3em;
     }
 
@@ -441,20 +441,13 @@ footer p
 
 }
 
-/* ---- Affichage Tablette ---- */
-@media screen and (min-width: 768px) and (max-width: 1023px)
-{
-
-}
-
-/* ---- Affichage Desktop ---- */
+/* ---- Affichage commun Desktop et Tablette ---- */
 @media screen and (min-width: 768px)
 {
     body
     {
         padding-left: 3em;
         padding-right: 3em;
-        font-size: 0.9vw;
     }
 
 /*     ----- Adjusting header display ----- */
@@ -492,11 +485,6 @@ footer p
         margin-top: 2.5em;
     }
 
-    #activites
-    {
-        scroll-margin-top: -2em;
-    }
-
     nav ul
     {
         display: flex;
@@ -529,17 +517,10 @@ footer p
         margin-top: 0;
     }
 
-    #search-bar
-    {
-        height: 6vh;
-        width: 22vw;
-    }
-
     .icon-gps
     {
         height: 100%;
         box-sizing: border-box;
-        width: 2.5vw;
     }
 
     #search-button
@@ -585,20 +566,11 @@ footer p
     }
 
 /*    ----- Main ----- */
-    main
-    {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
-
     section
     {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         border-radius: 20px;
-        height: 80vh;
     }
 
     section>*
@@ -610,39 +582,6 @@ footer p
     {
         margin-bottom: 0;
         margin-top: 0;
-    }
-
-    .card-box
-    {
-        height: 70%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-
-    .score i
-    {
-        font-size: 0.9vw;
-    }
-
-    #hebergements
-    {
-        order: -1;
-        background: #F2F2F2;
-        width: 65%;
-    }
-
-    #hebergements h2
-    {
-        padding-bottom: 5%;
-    }
-
-    #hebergements .card
-    {
-        height: 45%;
-        width: 28%;
-        margin-bottom: 2em;
-        margin-right: 2em;
     }
 
     #hebergements img
@@ -658,30 +597,212 @@ footer p
         padding-top: 0.5em;
     }
 
-
     #hebergements #more
     {
         margin-top: 0;
         margin-bottom: 0;
-        padding-top: 2%;
     }
 
     #populaires
     {
-        width: 30%;
         background: #F2F2F2;
-    }
-
-    #populaires .section-title
-    {
-        padding-top: 8%;
-        padding-bottom: 5%;
     }
 
     .section-title i
     {
         padding-right: 4vw;
         font-size: 1.3vw;
+    }
+
+    #activites>*
+    {
+        padding-left: 0;
+    }
+
+    #activites h2
+    {
+        padding-bottom: 4vh;
+    }
+
+    #activites img
+    {
+        flex: 1;
+    }
+
+    #activites h3
+    {
+        padding-bottom: 3%;
+    }
+/*    ----- Footer ----- */
+    footer
+    {
+        margin-left: -3em;
+        margin-right: -3em;
+        padding-left: 3em;
+        padding-right: 3em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+
+}
+
+/* ---- Affichage Tablette ---- */
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+    body
+    {
+        font-size: 2vw;
+    }
+
+/*    ----- Champ de recherche ----- */
+    #search-bar
+    {
+        height: 8vh;
+        width: 45vw;
+    }
+
+    .icon-gps
+    {
+        width: 20%;
+    }
+/*    ----- Main ----- */
+    section
+    {
+        justify-content: space-around;
+        font-size: 1.5vw;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-bottom: 5vh;
+    }
+
+    .card-box
+    {
+        height: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #hebergements
+    {
+        background: #F2F2F2;
+    }
+
+    #hebergements .card
+    {
+        width: 40%;
+        margin: 2%;
+    }
+
+    #populaires .section-title
+    {
+        padding-bottom: 5%;
+    }
+
+    #populaires .card
+    {
+        width: 90%;
+        margin-bottom: 4%;
+    }
+
+
+    #activites .card
+    {
+        width: 40%;
+        box-sizing: border-box;
+        margin: 3%;
+    }
+
+    footer
+    {
+        font-size: 1.5vw;
+    }
+
+    footer>*
+    {
+        margin-right: 12vw;
+    }
+
+
+}
+
+/* ---- Affichage Desktop ---- */
+@media screen and (min-width: 1024px)
+{
+    body
+    {
+        font-size: 0.9vw;
+    }
+/*    ----- Champ de recherche ----- */
+    #search-bar
+    {
+        height: 6vh;
+        width: 22vw;
+    }
+
+    .icon-gps
+    {
+        width: 15%;
+    }
+
+/*    ----- Main ----- */
+    main
+    {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    section
+    {
+        height: 95vh;
+        justify-content: center;
+    }
+
+    #hebergements h2
+    {
+        padding-bottom: 5%;
+    }
+
+    #hebergements #more
+    {
+        padding-top: 2%;
+    }
+
+    .card-box
+    {
+        height: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    #hebergements
+    {
+        order: -1;
+        background: #F2F2F2;
+        width: 65%;
+    }
+
+    #hebergements .card
+    {
+        height: 45%;
+        width: 28%;
+        margin-bottom: 2em;
+        margin-right: 2em;
+    }
+
+    #populaires
+    {
+        width: 30%;
+    }
+
+    #populaires .section-title
+    {
+        padding-top: 8%;
+        padding-bottom: 5%;
     }
 
     #populaires .card
@@ -697,19 +818,15 @@ footer p
         flex: 1;
     }
 
+    .score i
+    {
+        font-size: 0.9vw;
+    }
+
     #activites
     {
         width: 100%;
-    }
-
-    #activites>*
-    {
-        padding-left: 0;
-    }
-
-    #activites h2
-    {
-        padding-bottom: 4vh;
+        scroll-margin-top: -2em;
     }
 
     #activites .card-box
@@ -736,27 +853,6 @@ footer p
     {
         height: 55%;
         box-sizing: border-box;
-    }
-
-    #activites img
-    {
-        flex: 1;
-    }
-
-    #activites h3
-    {
-        padding-bottom: 3%;
-    }
-/*    ----- Footer ----- */
-    footer
-    {
-        margin-left: -3em;
-        margin-right: -3em;
-        padding-left: 3em;
-        padding-right: 3em;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
     }
 
     footer>*
